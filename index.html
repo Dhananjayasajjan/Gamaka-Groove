@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamaka Groove</title>
+    <link href="stylesheet.css" rel="stylesheet">
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <h1>Gamaka Groove </h1>
+        <form action="search_results.html" method="GET" onsubmit="return validateSearch()">
+            <input type="text" id="searchBar" name="query" placeholder="Search for a song...">
+            <button type="submit">🔍</button>
+        </form>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <div id="selectedalbums">
+
+        <div> 
+            <h2>Popular albums and singers
+            <button id="toggleButton">View All</button></h2>
+        </div>
+        
+        <div class="album-list">
+            <div class="album">
+                <img src="shiva/shiva.png" alt="Album 1" onclick="openAlbum('album1')">
+                <h3>Devotional Songs</h3>
+            </div>
+    
+            <div class="album">
+                <img src="covers/1.jpg" alt="Album 2" onclick="openAlbum2('album2')">
+                <h3>Mortals</h3>
+            </div>
+    
+            <div class="album">
+                <img src="covers/3.jpg" alt="Album 3" onclick="openAlbum3('album3')">
+                <h3>DEAF KEV</h3>
+            </div>
+            <div class="album">
+                <img src="covers/5.jpg" alt="Album 4" onclick="openAlbum('album4')">
+                <h3>Album 4</h3>
+            </div>
+            <div class="album">
+                <img src="covers/6.jpg" alt="Album 5" onclick="openAlbum('album5')">
+                <h3>Album 5</h3>
+            </div>
+            <div class="album">
+                <img src="covers/7.jpg" alt="Album 6" onclick="openAlbum('album6')">
+                <h3>Album 6</h3>
+            </div>
+            <div class="album">
+                <img src="covers/8.jpg" alt="Album 7" onclick="openAlbum('album7')">
+                <h3>Album 7</h3>
+            </div>
+            <div class="album">
+                <img src="covers/9.jpg" alt="Album 8" onclick="openAlbum('album8')">
+                <h3>Album 8</h3>
+            </div>
+        </div>
+    </div>
+    <div id="selectedalbums">  
+        <div> 
+            <h2>Trending Songs
+                <button id="toggleButton">View All</button></h2>
+        </div>
+
+        <div class="album-list">
+            <div class="album">
+                <img src="shiva/chandrachooda.png" alt="Album 1" onclick="openAlbum('album1')">
+                <h3>Album 1</h3>
+            </div>
+    
+            <div class="album">
+                <img src="covers/2.jpg" alt="Album 2" onclick="openAlbum2('album2')">
+                <h3>Album 2</h3>
+            </div>
+    
+            <div class="album">
+                <img src="shiva/Gudugudiya.png" alt="Album 3" onclick="openAlbum3('album3')">
+                <h3>Album 3</h3>
+            </div>
+            <div class="album">
+                <img src="covers/10.jpg" alt="Album 4" onclick="openAlbum('album4')">
+                <h3>Album 4</h3>
+            </div>
+            <div class="album">
+                <img src="covers/6.jpg" alt="Album 5" onclick="openAlbum('album5')">
+                <h3>Album 5</h3>
+            </div>
+            <div class="album">
+                <img src="covers/7.jpg" alt="Album 6" onclick="openAlbum('album6')">
+                <h3>Album 6</h3>
+            </div>
+            <div class="album">
+                <img src="covers/8.jpg" alt="Album 7" onclick="openAlbum('album7')">
+                <h3>Album 7</h3>
+            </div>
+            <div class="album">
+                <img src="covers/9.jpg" alt="Album 8" onclick="openAlbum('album8')">
+                <h3>Album 8</h3>
+            </div>
+        </div>
+    
+    </div>
+ 
+
+    <!-- add songs to the album 2  -->
+    
+
+    <div id="search-results" class="song-list"></div>
+    
+     <script src="exp.js"></script>
+     <script>
+        function validateSearch() {
+            const input = document.getElementById('searchBar').value;
+            return input.trim() !== "";
+        }
+    </script>
+    
+    
+</body>
+</html>
